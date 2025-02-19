@@ -1,7 +1,7 @@
 #include <iostream>
-
-std::string superReducedString(std::string s) {
-    std::string result; // Acts as a stack
+using namespace std;
+string superReducedString(string s) {
+    string result; // Acts as a stack
     
     for (char c : s) {
         if (!result.empty() && result.back() == c) {
@@ -15,9 +15,9 @@ std::string superReducedString(std::string s) {
 }
 
 int main() {
-    std::string s;
-    std::cin >> s;
+    string s;
+    cin >> s;
 
-    std::cout << superReducedString(s) << std::endl;
+    cout << superReducedString(s) << endl;
     return 0;
 }
